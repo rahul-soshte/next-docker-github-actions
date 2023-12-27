@@ -41,6 +41,6 @@ COPY --from=builder /app/pages ./pages
 USER nextjs
 
 # Expose
-EXPOSE 3005
+EXPOSE 3000
 ENV NEXT_TELEMETRY_DISABLED 1
 CMD ["yarn", "start"]

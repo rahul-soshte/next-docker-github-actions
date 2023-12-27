@@ -52,8 +52,7 @@ jobs:
           # TODO update APT and install Docker from the script so we don't need to do it manually on the server
           script: |
             docker login ghcr.io -u $GITHUB_USERNAME -p $GITHUB_TOKEN
-          # docker pull ghcr.io/rahul-soshte/next-docker-github-actions/next_test_image:latest
-          # docker stop next-test-app
-          # docker system prune -f
-
-# docker run --name next-test-app -dit -p 12345:3000 ghcr.io/rahul-soshte/next-docker-github-actions/next_test_image:latest
+            docker pull ghcr.io/rahul-soshte/next-docker-github-actions/next_test_image:latest
+            docker stop next-test-app
+            docker system prune -f
+            docker run --name next-test-app -dit -p 12345:3000 ghcr.io/rahul-soshte/next-docker-github-actions/next_test_image:latest
